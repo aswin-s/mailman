@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Inbox</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+ 
+ <ion-list>
+   <ion-list-header>Today </ion-list-header>
+   <ion-item-sliding>     
+          <ion-item *ngFor="let mail of mails">
+            <ion-icon name="ios-mail-outline" item-left>
+            </ion-icon>
+            <h2>{{mail.from}}</h2>
+            <p>{{mail.subject}}</p>
+            <span item-right>{{mail.time|DateTimePipe}}</span>
+          </ion-item>
+          </ion-item-sliding>
+      </ion-list>
+</ion-content>
